@@ -18,7 +18,20 @@ namespace De.Markellus.Blender.Nif.Builder
 
             try
             {
+                string strInit = strSrc + "/" + strName + "/" + "/__init__.py";
                 version = File.ReadAllText(strSrc + "/" + strName + "/" + "VERSION").Replace("\r\n", "");
+                string[] strVersion = version.Split('.');
+
+                string[] initFile = File.ReadAllLines(strInit);
+                for (int i = 0; i < initFile.Length; i++)
+                {
+                    if (initFile[i].Contains("\"version\":"))
+                    {
+                        initFile[i] = "    \"version\": (" + strVersion[0] + ", " + strVersion[1] + ", " + strVersion[2] + "),";
+                    }
+                }
+                File.Delete(strInit);
+                File.WriteAllLines(strInit, initFile);
             }
             catch
             {
@@ -33,6 +46,7 @@ namespace De.Markellus.Blender.Nif.Builder
                 //var root = archive.CreateEntry(strName + "/");
                 DirectoryCopy(strSrc, "", true, archive);
                 DirectoryCopy(strDeps, strName + "/dependencies/pyffi", true, archive);
+
                 archive.Dispose();
                 if (File.Exists(strTarget))
                 {

@@ -4,3 +4,4 @@ dependencies/
 *.suo
 src_nifbuilder/.vs/de.markellus.blender.nif.builder/v15/
 src_nifbuilder/de.markellus.blender.nif.builder/obj/
+build/
