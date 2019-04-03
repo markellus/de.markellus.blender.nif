@@ -11,36 +11,48 @@ namespace De.Markellus.Blender.Nif.Builder
         {
             IniFile iniConfig = new IniFile("../config.ini");
             string strName = iniConfig.GetVar("addon_name");
-           string strSrc = "../" + iniConfig.GetVar("source_folder");
-           string strDeps = "../" + iniConfig.GetVar("pyffi_folder");
-           string version = "unknown";
+            string strSrc = "../" + iniConfig.GetVar("source_folder");
+            string strDeps = "../" + iniConfig.GetVar("pyffi_folder");
+            string strBlender = iniConfig.GetVar("blender_folder");
+            string version = "unknown";
 
-           try
-           {
-               version = File.ReadAllText(strSrc + "/" + strName + "/" + "VERSION").Replace("\r\n", "");
+            try
+            {
+                version = File.ReadAllText(strSrc + "/" + strName + "/" + "VERSION").Replace("\r\n", "");
             }
-           catch
-           {
+            catch
+            {
                 Console.WriteLine("Failed to retrieve version!");
-           }
+            }
 
-           string strTarget = strName + "-" + version + ".zip";
+            string strTarget = strName + "-" + version + ".zip";
 
-           using (var memoryStream = new MemoryStream())
-           {
-               ZipArchive archive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true);
-               //var root = archive.CreateEntry(strName + "/");
-               DirectoryCopy(strSrc, "", true, archive);
-               DirectoryCopy(strDeps, strName + "/dependencies/pyffi", true, archive);
+            using (var memoryStream = new MemoryStream())
+            {
+                ZipArchive archive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true);
+                //var root = archive.CreateEntry(strName + "/");
+                DirectoryCopy(strSrc, "", true, archive);
+                DirectoryCopy(strDeps, strName + "/dependencies/pyffi", true, archive);
                 archive.Dispose();
-               if (File.Exists(strTarget))
-               {
-                   File.Delete(strTarget);
-               }
+                if (File.Exists(strTarget))
+                {
+                    File.Delete(strTarget);
+                }
 
-               File.WriteAllBytes(strTarget, memoryStream.ToArray());
-            } 
+                File.WriteAllBytes(strTarget, memoryStream.ToArray());
+            }
+
+            if (strBlender != "")
+            {
+                string strAddon = strBlender + "/" + strName;
+                if (Directory.Exists(strAddon))
+                {
+                    Directory.Delete(strAddon, true);
+                }
+                ZipFile.ExtractToDirectory(strTarget, strBlender);
+            }
         }
+
         private static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs, ZipArchive archive)
         {
             // Get the subdirectories for the specified directory.
