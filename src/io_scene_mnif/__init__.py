@@ -44,24 +44,15 @@ import sys
 import bpy
 import bpy.props
 
-# Python dependencies are bundled inside the io_scene_mnif/dependencies folder
+from io_scene_mnif import properties, operators, ui
+
+# load bundled dependencies
 _dependencies_path = os.path.join(os.path.dirname(__file__), "dependencies")
 if _dependencies_path not in sys.path:
     sys.path.append(_dependencies_path)
-    print(sys.path)
 del _dependencies_path
 
-import io_scene_mnif
-from io_scene_mnif import properties, operators, ui
-
-
-try:
-    from io_scene_mnif.utility import nif_debug
-    nif_debug.start_debug()
-except:
-    print("Failed to load debug module")
-
-# Blender addon info.
+# Blender add-on info.
 bl_info = {
     "name": "[M] NetImmerse/Gamebryo nif format",
     "description": "[M] Import and export files in the NetImmerse/Gamebryo nif format (.nif)",
@@ -94,18 +85,14 @@ def _init_loggers():
 # noinspection PyUnusedLocal
 def menu_func_import(self, context):
     self.layout.operator(operators.nif_import_op.NifImportOperator.bl_idname, text="NetImmerse/Gamebryo (.nif)")
-    self.layout.operator(operators.kf_import_op.KfImportOperator.bl_idname, text="NetImmerse/Gamebryo (.kf)")
-    # TODO: get default path from config registry
-    # default_path = bpy.data.filename.replace(".blend", ".nif")
-    # ).filepath = default_path
 
 
 # noinspection PyUnusedLocal
 def menu_func_export(self, context):
     self.layout.operator(operators.nif_export_op.NifExportOperator.bl_idname, text="NetImmerse/Gamebryo (.nif)")
-    # self.layout.operator(operators.kf_export_op.KfExportOperator.bl_idname, text="NetImmerse/Gamebryo (.kf)")
 
 
+# noinspection PyUnresolvedReferences
 def register():
     _init_loggers()
     properties.register()
@@ -115,8 +102,8 @@ def register():
     bpy.types.INFO_MT_file_export.append(menu_func_export)
 
 
+# noinspection PyUnresolvedReferences
 def unregister():
-    # no idea how to do this... oh well, let's not lose any sleep over it uninit_loggers()
     bpy.types.INFO_MT_file_import.remove(menu_func_import)
     bpy.types.INFO_MT_file_export.remove(menu_func_export)
     bpy.utils.unregister_module(__name__)
