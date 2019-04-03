@@ -112,6 +112,9 @@ class NifImport(NifCommon):
         self.dict_textures = {}
         self.dict_mesh_uvlayers = []
 
+        if NifOp.props.clear_scene:
+            nif_utils.delete_scene_objects()
+
         # catch nif import errors
         try:
             # check that one armature is selected in 'import geometry + parent

@@ -44,7 +44,6 @@ import sys
 import bpy
 import bpy.props
 
-from io_scene_mnif import properties, operators, ui
 
 # load bundled dependencies
 _dependencies_path = os.path.join(os.path.dirname(__file__), "dependencies")
@@ -52,6 +51,7 @@ if _dependencies_path not in sys.path:
     sys.path.append(_dependencies_path)
 del _dependencies_path
 
+from io_scene_mnif import properties, operators, ui
 # Blender add-on info.
 bl_info = {
     "name": "[M] NetImmerse/Gamebryo nif format",

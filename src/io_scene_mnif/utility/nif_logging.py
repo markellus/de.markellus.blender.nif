@@ -46,7 +46,8 @@ class _MockOperator:
 
 
 class NifLog:
-    """A simple custom exception class for export errors. This module require initialisation of an operator reference to function."""  
+    """A simple custom exception class for export errors. This module require initialisation of an operator reference
+    to function."""
     
     # Injectable operator reference used to perform reporting, default to simple logging
     op = _MockOperator()

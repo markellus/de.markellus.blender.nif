@@ -1,0 +1,7 @@
+v1.0.0a
+
++ Initial Fork
++ Added Import option "Clear Scene". When enabled, everything in the current scene gets deleted. Useful when creating a new project.
+M Import Spped optimizations
+F Texture path finding is not correctly implemented
+F Relative paths to Skyrim textures are not resolved

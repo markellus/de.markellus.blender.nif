@@ -66,6 +66,11 @@ class NifImportOperator(bpy.types.Operator, ImportHelper, NifOperatorCommon):
         description="This will overwrite any previously stored scene information with the Nif header info.",
         default=True)
 
+    clear_scene = bpy.props.BoolProperty(
+        name="Clear Scene",
+        description="Deletes everything in the scene before importing the Nif.",
+        default=False)
+
     #: FaceGen EGM file for morphs.
     egm_file = bpy.props.StringProperty(
         name="FaceGen EGM File",
@@ -136,7 +141,6 @@ class NifImportOperator(bpy.types.Operator, ImportHelper, NifOperatorCommon):
         name="Combine Vertices",
         description="Merge vertices that have identical location and normal values.",
         default=False)
-    
 
     def execute(self, context):
         """Execute the import operators: first constructs a
@@ -144,13 +148,12 @@ class NifImportOperator(bpy.types.Operator, ImportHelper, NifOperatorCommon):
         calls its :meth:`~io_scene_mnif.nif_import.NifImport.execute`
         method.
         """
-        
+
         # setup the viewport for preferred viewing settings
         bpy.context.scene.game_settings.material_mode = 'GLSL'
         for area in bpy.context.window.screen.areas:
             if area.type =='VIEW_3D':
                 area.spaces[0].viewport_shade = 'MATERIAL'
                 area.spaces[0].show_backface_culling = True
-        
+
         return nif_import.NifImport(self, context).execute()
-    

@@ -11,28 +11,37 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/__init__.py">
+        <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/nif_import.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-694">
-              <caret line="43" column="10" lean-forward="true" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+            <state relative-caret-position="257">
+              <caret line="104" column="32" lean-forward="true" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
+              <folding>
+                <element signature="e#1785#1831#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/utility/nif_debug.py">
+        <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/operators/nif_import_op.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="50" />
+            <state relative-caret-position="295">
+              <caret line="150" column="11" lean-forward="true" selection-start-line="150" selection-start-column="11" selection-end-line="150" selection-end-column="11" />
+              <folding>
+                <element signature="e#1807#1817#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/utility/nif_logging.py">
+        <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/utility/nif_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-388">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="201">
+              <caret line="157" column="11" lean-forward="true" selection-start-line="157" selection-start-column="11" selection-end-line="157" selection-end-column="11" />
+              <folding>
+                <element signature="e#1799#1815#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,6 +53,12 @@
       <find>authors</find>
       <find>io_scene_nif</find>
       <find>menu_func_import</find>
+      <find>skyrim</find>
+      <find>mergeskel</find>
+      <find>return</find>
+      <find>combine_vertices</find>
+      <find>nifo</find>
+      <find>SKELETON_ONLY</find>
     </findStrings>
     <replaceStrings>
       <replace>io_scene_mnif</replace>
@@ -58,6 +73,11 @@
         <option value="$PROJECT_DIR$/src/io_scene_mnif/kf_import.py" />
         <option value="$PROJECT_DIR$/src/io_scene_mnif/VERSION" />
         <option value="$PROJECT_DIR$/src/io_scene_mnif/__init__.py" />
+        <option value="$PROJECT_DIR$/src/io_scene_mnif/utility/nif_logging.py" />
+        <option value="$PROJECT_DIR$/src/io_scene_mnif/io/nif.py" />
+        <option value="$PROJECT_DIR$/src/io_scene_mnif/utility/nif_utils.py" />
+        <option value="$PROJECT_DIR$/src/io_scene_mnif/nif_import.py" />
+        <option value="$PROJECT_DIR$/src/io_scene_mnif/operators/nif_import_op.py" />
       </list>
     </option>
   </component>
@@ -83,17 +103,6 @@
             <path>
               <item name="de.markellus.blender.nif" type="b2602c69:ProjectViewProjectNode" />
               <item name="de.markellus.blender.nif" type="462c0819:PsiDirectoryNode" />
-              <item name="dependencies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="de.markellus.blender.nif" type="b2602c69:ProjectViewProjectNode" />
-              <item name="de.markellus.blender.nif" type="462c0819:PsiDirectoryNode" />
-              <item name="dependencies" type="462c0819:PsiDirectoryNode" />
-              <item name="bpy-autocomplete" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="de.markellus.blender.nif" type="b2602c69:ProjectViewProjectNode" />
-              <item name="de.markellus.blender.nif" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -107,7 +116,7 @@
               <item name="de.markellus.blender.nif" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="io_scene_mnif" type="462c0819:PsiDirectoryNode" />
-              <item name="utility" type="462c0819:PsiDirectoryNode" />
+              <item name="operators" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -164,19 +173,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2568000" />
+    <option name="totallyTimeSpent" value="4767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1865" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25263157" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25263157" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32917964" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997923" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997923" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -192,6 +201,29 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25263157" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32917964" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997923" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -221,24 +253,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/utility/nif_logging.py">
+    <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-388">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="394">
+          <caret line="89" column="28" lean-forward="true" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
+          <folding>
+            <element signature="e#1766#1780#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/utility/nif_debug.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
+        <state relative-caret-position="173">
           <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/__init__.py">
+    <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/utility/nif_logging.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-694">
-          <caret line="43" column="10" lean-forward="true" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+        <state relative-caret-position="37">
+          <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/io/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/io/kf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-643" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/io/nif.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+          <folding>
+            <element signature="e#1766#1805#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/utility/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/utility/nif_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="157" column="11" lean-forward="true" selection-start-line="157" selection-start-column="11" selection-end-line="157" selection-end-column="11" />
+          <folding>
+            <element signature="e#1799#1815#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/modules/object/object_export.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9154">
+          <caret line="609" column="66" selection-start-line="609" selection-start-column="66" selection-end-line="609" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dependencies/pyffi/tests/test_nif/test_niftoaster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/operators/nif_import_op.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="150" column="11" lean-forward="true" selection-start-line="150" selection-start-column="11" selection-end-line="150" selection-end-column="11" />
+          <folding>
+            <element signature="e#1807#1817#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io_scene_mnif/nif_import.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="104" column="32" lean-forward="true" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
+          <folding>
+            <element signature="e#1785#1831#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

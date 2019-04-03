@@ -40,6 +40,7 @@
 
 import mathutils
 import math
+import bpy
 
 from io_scene_mnif.utility.nif_logging import NifLog
 from io_scene_mnif.utility.nif_global import NifOp
@@ -172,3 +173,21 @@ def find_extra(niBlock, extratype):
         if isinstance(extra, extratype):
             return extra
     return None
+
+
+def delete_scene_objects(scene=None):
+    """Delete a scene and all its objects."""
+    #
+    # Sort out the scene object.
+    if scene is None:
+        # Not specified: it's the current scene.
+        scene = bpy.context.screen.scene
+    else:
+        if isinstance(scene, str):
+            # Specified by name: get the scene object.
+            scene = bpy.data.scenes[scene]
+        # Otherwise, assume it's a scene object already.
+    #
+    # Remove objects.
+    for object_ in scene.objects:
+        bpy.data.objects.remove(object_, True)
