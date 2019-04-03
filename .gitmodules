@@ -1,0 +1,3 @@
+[submodule "dependencies/pyffi"]
+	path = dependencies/pyffi
+	url = https://github.com/niftools/pyffi.git
